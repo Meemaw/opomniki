@@ -1,6 +1,8 @@
 window.addEventListener('load', function() {
 	//stran nalozena
 		
+		
+	
 	//Posodobi opomnike
 	var posodobiOpomnike = function() {
 		var opomniki = document.querySelectorAll(".opomnik");
@@ -14,6 +16,7 @@ window.addEventListener('load', function() {
 				casovnik.innerHTML = cas -1;
 			} else {
 				var naziv = document.querySelector("#naziv_opomnika").innerHTML;
+				alert("Hollaaaa");
 				document.querySelector("#opomniki").removeChild(opomnik);
 			}
 	
@@ -45,7 +48,7 @@ window.addEventListener('load', function() {
 		document.querySelector("#naziv_opomnika").value = "";
 		document.querySelector("#cas_opomnika").value = "";
 		
-		document.querySelector("#opomniki").innerHTML += "<div class='opomnik'>"
+		document.querySelector("#opomniki").innerHTML += "<div class='opomnik senca rob'>"
 				+ "<div class='naziv_opomnika'>" + naziv + "</div>" 
 				+ "<div class='cas_opomnika'> Opomnik čez <span>" + dolzina + "</span> sekund.</div></div>";
 		
