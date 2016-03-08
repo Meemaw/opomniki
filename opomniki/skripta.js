@@ -9,6 +9,13 @@ window.addEventListener('load', function() {
 			var opomnik = opomniki[i];
 			var casovnik = opomnik.querySelector("span");
 			var cas = parseInt(casovnik.innerHTML);
+			
+			if(cas > 0) {
+				casovnik.innerHTML = cas -1;
+			} else {
+				var naziv = document.querySelector("#naziv_opomnika").innerHTML;
+				document.querySelector("#opomniki").removeChild(opomnik);
+			}
 	
 			//TODO: 
 			// - če je čas enak 0, izpiši opozorilo "Opomnik!\n\nZadolžitev NAZIV_OPOMNIK je potekla!"
